@@ -189,7 +189,7 @@ class _TfliteModelState extends State<CatAndDogView> {
                         child: Container(
                           margin: EdgeInsets.all(10),
                           child: Text(
-                            "${result['label']} - ${result['confidence'].toStringAsFixed(2)}",
+                            "${result['label']} - ${(result['confidence'] * 100).toStringAsFixed(2)} %",
                             style: const TextStyle(
                                 color: Colors.red, fontSize: 20),
                           ),
