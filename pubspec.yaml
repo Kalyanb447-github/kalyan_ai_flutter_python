@@ -21,4 +21,6 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
+    - assets/cat_and_dog/
+    - assets/flowers/
   uses-material-design: true

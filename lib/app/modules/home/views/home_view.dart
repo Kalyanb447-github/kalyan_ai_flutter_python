@@ -10,21 +10,36 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('HomeView'),
-          centerTitle: true,
+      appBar: AppBar(
+        title: const Text('HomeView'),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.IMAGE_DETECTAION);
+              },
+              child: Text('Image Detection'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.CAT_AND_DOG);
+              },
+              child: Text('Cat and dog'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.FLOWERS);
+              },
+              child: Text('Flowers'),
+            )
+          ],
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                  onPressed: () {
-                    Get.toNamed(Routes.IMAGE_DETECTAION);
-                  },
-                  child: Text('Image Detection'))
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }
