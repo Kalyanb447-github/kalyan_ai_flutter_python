@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +36,25 @@ class HomeView extends GetView<HomeController> {
                 Get.toNamed(Routes.FLOWERS);
               },
               child: Text('Flowers'),
-            )
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.fruit_AND_vegetables);
+              },
+              child: Text('Fruit and vegetables'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.FIND_YOUR_EMOTION);
+              },
+              child: Text('Find your emotion'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.IMAGE_TO_TEXT);
+              },
+              child: Text('Image to text'),
+            ),
           ],
         ),
       ),

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
 
-class CatAndDogView extends StatefulWidget {
-  const CatAndDogView({Key? key}) : super(key: key);
+class fruitAndvegetablesView extends StatefulWidget {
+  const fruitAndvegetablesView({Key? key}) : super(key: key);
 
   @override
   _TfliteModelState createState() => _TfliteModelState();
 }
 
-class _TfliteModelState extends State<CatAndDogView> {
+class _TfliteModelState extends State<fruitAndvegetablesView> {
   late File _image;
   late List _results;
   bool imageSelect = false;
@@ -24,8 +25,8 @@ class _TfliteModelState extends State<CatAndDogView> {
     Tflite.close();
     String res;
     res = (await Tflite.loadModel(
-        model: "assets/cat_and_dog/model.tflite",
-        labels: "assets/cat_and_dog/labels.txt"))!;
+        model: "assets/flowers/model.tflite",
+        labels: "assets/flowers/labels.txt"))!;
 
     print("Models loading status: $res");
   }
@@ -49,7 +50,7 @@ class _TfliteModelState extends State<CatAndDogView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Cat and dog detection"),
+        title: const Text("Fruit and vegetables"),
       ),
       body: ListView(
         children: [

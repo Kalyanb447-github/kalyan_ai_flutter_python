@@ -10,6 +10,9 @@ dependencies:
   tflite: any
   image_picker: any
   get: any
+  path_provider: any
+  mime: any
+  camera: any
   flutter:
     sdk: flutter
 
